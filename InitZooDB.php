@@ -45,40 +45,6 @@ try{
   $BDD->exec($sql);
   echo "Table \" institution\" created successfully";
 
-  $sql = "CREATE TABLE IF NOT EXISTS Espece(
-  nom_scientifique VARCHAR(50),
-  nom_courant VARCHAR(50),
-  regime_alimentaire VARCHAR(50),
-  PRIMARY KEY(nom_scientifique)
-  )";
-  $BDD->exec($sql);
-  echo "Table \"Espece\" created successfully";
-
-  $sql = "CREATE TABLE IF NOT EXISTS Climat(
-  nom_scientifique VARCHAR(50),
-  nom_climat VARCHAR(50),
-  PRIMARY KEY(nom_climat, nom_scientifique),
-  FOREIGN KEY(nom_scientifique) REFERENCES (Espece)
-  )";
-  $BDD->exec($sql);
-  echo "Table \"Climat\" created successfully";
-
-  $sql = "CREATE TABLE IF NOT EXISTS Animal(
-  nom_scientifique
-  PRIMARY KEY(),
-  FOREIGN KEY() REFERENCES ()
-  )";
-  $BDD->exec($sql);
-  echo "Table  created successfully";
-
-  $sql = "CREATE TABLE IF NOT EXISTS (
-
-  PRIMARY KEY(),
-  FOREIGN KEY() REFERENCES ()
-  )";
-  $BDD->exec($sql);
-  echo "Table created successfully";
-
   $sql = "CREATE TABLE IF NOT EXISTS (
 
   PRIMARY KEY(),
