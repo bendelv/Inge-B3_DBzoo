@@ -52,7 +52,16 @@ try{
   )";
   $BDD->exec($sql);
   echo "Table created successfully";
-
+ 
+  //////
+  $sql = "CREATE TABLE IF NOT EXISTS Espece(
+  nom_scientifique VARCHAR(50),
+  nom_courant VARCHAR(50),
+  regime_alimentaire VARCHAR(200),
+  PRIMARY KEY(nom_scientifique)
+  )";
+  $BDD->exec($sql);
+  ///// Espèce(nom_scientique, nom_courant, régime_alimentaire)
 
 
 }catch(PDOException $e){
